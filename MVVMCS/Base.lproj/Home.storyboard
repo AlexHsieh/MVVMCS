@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RDv-KG-pv2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Guide-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="home" id="BYZ-38-t0r" customClass="MVVMCSHomeViewController" customModule="MVVMCS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Guide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOF-ZT-h60">
+                                <rect key="frame" x="29" y="82" width="317" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="xo0-Dl-O2g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9VR-z1-21i">
+                                <rect key="frame" x="29" y="185" width="317" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Dv4-O6-mr4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Pick a City"/>
+                                <connections>
+                                    <action selector="pickCityButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l6k-tb-PNA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFQ-lI-zqe">
+                                <rect key="frame" x="29" y="280" width="317" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="JgX-r8-82Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Random Pick a City"/>
+                                <connections>
+                                    <action selector="randomPickButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TFb-0l-0is"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EOF-ZT-h60" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7mI-aY-5jI"/>
+                            <constraint firstItem="EOF-ZT-h60" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="J87-Qp-tBQ"/>
+                            <constraint firstItem="9VR-z1-21i" firstAttribute="top" secondItem="EOF-ZT-h60" secondAttribute="bottom" constant="48" id="KrX-Wt-ehk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EOF-ZT-h60" secondAttribute="trailing" constant="13" id="OAB-m6-Slh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KFQ-lI-zqe" secondAttribute="trailing" constant="13" id="VD4-8d-Ywm"/>
+                            <constraint firstItem="KFQ-lI-zqe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="cR1-cW-lkn"/>
+                            <constraint firstItem="EOF-ZT-h60" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="eNs-CZ-eOU"/>
+                            <constraint firstItem="KFQ-lI-zqe" firstAttribute="top" secondItem="9VR-z1-21i" secondAttribute="bottom" constant="35" id="ljL-by-puO"/>
+                            <constraint firstItem="9VR-z1-21i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="mjd-eC-0Zs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9VR-z1-21i" secondAttribute="trailing" constant="13" id="nkc-D4-FCk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Guide" id="Mje-Qn-5dT"/>
+                    <connections>
+                        <outlet property="pickCityButton" destination="9VR-z1-21i" id="brA-Z4-rqu"/>
+                        <outlet property="randomPickCityButton" destination="KFQ-lI-zqe" id="5LV-IW-LFi"/>
+                        <segue destination="dJU-X7-d6C" kind="show" identifier="showCityList" id="Ep1-0p-NFQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+        </scene>
+        <!--City-->
+        <scene sceneID="UVe-of-7NO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="City" id="dJU-X7-d6C" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83D-bB-1fP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="123.23838080959521"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="arH-Si-7bi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RDv-KG-pv2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OVP-fz-QJz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UN1-sK-06I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="niH-MA-4Dp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
